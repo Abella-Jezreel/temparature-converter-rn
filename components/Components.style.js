@@ -16,4 +16,8 @@ export const styles = StyleSheet.create({
         right: 20,
         fontSize: 30,
     },
+    DisplayText: {
+        fontSize: 70,
+        color: "#fff",
+    },
 });

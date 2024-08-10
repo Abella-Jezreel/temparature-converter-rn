@@ -1,8 +1,7 @@
 import { View, Text, TextInput } from "react-native";
-import React from "react";
-import { styles } from "./Input.style";
+import { styles } from "./Components.style";
 
-const Input = ({ defaultValue }) => {
+const Input = ({ defaultValue, handleTemperatureChange, unit }) => {
   return (
     <View style={styles.container}>
       <TextInput
@@ -10,9 +9,10 @@ const Input = ({ defaultValue }) => {
         keyboardType="numeric"
         maxLength={3}
         placeholder="Enter temperature"
-        defaultValue={defaultValue}
+        defaultValue={defaultValue.toString()}
+        onChangeText={(value) => handleTemperatureChange(value)}
       />
-      <Text style={styles.degreeText}>°C</Text>
+      <Text style={styles.degreeText}>°{unit}</Text>
     </View>
   );
 };
