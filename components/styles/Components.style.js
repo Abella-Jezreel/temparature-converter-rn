@@ -12,12 +12,15 @@ export const styles = StyleSheet.create({
         borderRadius: 50,
     },
     degreeText: {
-        position: 'absolute',
-        right: 20,
         fontSize: 30,
     },
     DisplayText: {
         fontSize: 70,
         color: "#fff",
+    },
+    degreeTouch: {
+        position: 'absolute',
+        right: 20,
+        top: 12,
     },
 });

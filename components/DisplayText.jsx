@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { styles } from './Components.style'
+import { styles } from './styles/Components.style'
+import {convertTemperature, getOppositeUnit} from "../utils/temperature";
 
 const DisplayText = ({value, unit}) => {
   return (

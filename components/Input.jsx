@@ -1,7 +1,12 @@
-import { View, Text, TextInput } from "react-native";
-import { styles } from "./Components.style";
+import { View, Text, TextInput, TouchableOpacity, Button } from "react-native";
+import { styles } from "./styles/Components.style";
 
-const Input = ({ defaultValue, handleTemperatureChange, unit }) => {
+const Input = ({
+  defaultValue,
+  handleTemperatureChange,
+  unit,
+  onUnitPress,
+}) => {
   return (
     <View style={styles.container}>
       <TextInput
@@ -12,7 +17,9 @@ const Input = ({ defaultValue, handleTemperatureChange, unit }) => {
         defaultValue={defaultValue.toString()}
         onChangeText={(value) => handleTemperatureChange(value)}
       />
-      <Text style={styles.degreeText}>°{unit}</Text>
+      <TouchableOpacity style={styles.degreeTouch} onPress={onUnitPress}>
+        <Text style={styles.degreeText}>°{unit}</Text>
+      </TouchableOpacity>
     </View>
   );
 };
