@@ -18,7 +18,7 @@ const Input = ({
         onChangeText={(value) => handleTemperatureChange(value)}
       />
       <TouchableOpacity style={styles.degreeTouch} onPress={onUnitPress}>
-        <Text style={styles.degreeText}>°{unit}</Text>
+        <Text style={styles.degreeText}>{unit}</Text>
       </TouchableOpacity>
     </View>
   );

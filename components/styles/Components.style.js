@@ -23,4 +23,16 @@ export const styles = StyleSheet.create({
         right: 20,
         top: 12,
     },
+    button: {
+        backgroundColor: "black",
+        paddingHorizontal: 40,
+        paddingVertical: 20,
+        borderRadius: 50,
+        width: 250,
+    },
+    buttonText: {
+        color: "#fff",
+        fontWeight: "bold",
+        alignSelf: "center",
+    },
 });

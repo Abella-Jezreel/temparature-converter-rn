@@ -1,6 +1,6 @@
 const UNITS = {
-    CELSIUS: 'C',
-    FAHRENHEIT: 'F'
+    CELSIUS: '°C',
+    FAHRENHEIT: '°F'
 };
 
 function convertTemperature(temperature, unit) {
@@ -22,5 +22,21 @@ function getOppositeUnit(unit) {
       throw new Error('Invalid unit');
     }
 }
+
+function isCold(temperature, unit) {
+    let tempInCelsius;
+    if (unit === UNITS.FAHRENHEIT) {
+        tempInCelsius = parseFloat(convertTemperature(temperature, UNITS.FAHRENHEIT));
+    } else if (unit === UNITS.CELSIUS) {
+        tempInCelsius = temperature;
+    } else {
+        throw new Error('Invalid unit');
+    }
+
+    const COLD_THRESHOLD = 10;
+    return tempInCelsius < COLD_THRESHOLD;
+}
+
+export { isCold };
 
 export { UNITS, convertTemperature, getOppositeUnit };

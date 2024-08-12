@@ -5,7 +5,7 @@ import {convertTemperature, getOppositeUnit} from "../utils/temperature";
 
 const DisplayText = ({value, unit}) => {
   return (
-      <Text style={styles.DisplayText}>{value} °{unit}</Text>
+      <Text style={styles.DisplayText}>{value} {unit}</Text>
   )
 }
 

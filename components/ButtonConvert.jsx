@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native'
+import { TouchableOpacity, Text } from 'react-native'
 import React from 'react'
+import { styles } from './styles/Components.style'
 
-const ButtonConvert = () => {
+const ButtonConvert = ({unit, onPress}) => {
   return (
-    <View>
-      <Text>ButtonConvert</Text>
-    </View>
+    <TouchableOpacity style={styles.button} onPress={onPress}>
+      <Text style={styles.buttonText}>Convert to {unit}</Text>
+    </TouchableOpacity>
   )
 }
 
